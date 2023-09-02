@@ -92,6 +92,22 @@ cd pdsh
 make install -j $(nproc)
 ```
 
+### 1.7. Configure SSH authentication
+
+On the login node, run the following command.
+
+```
+ssh -o PasswordAuthentication=no -o StrictHostKeyChecking=no localhost
+```
+
+If it works successfully, you don't need to configure ssh authentication in the cluster.
+Else, run the following two ssh-keygen, then run the above "ssh localhost" to confirm that SSH authentication has been configured successfully. 
+
+```bash
+ssh-keygen -t ecdsa -f ${HOME}/.ssh/id_ecdsa -N "" -vvv
+ssh-keygen -y -f ${HOME}/.ssh/id_ecdsa >> ${HOME}/.ssh/authorized_keys
+```
+
 ## 2. Run DeepSpeed Infernece Benchmark (Need 2 GPU compute nodes)
 
 ### 2.1. Allocate two GPU nodes and start a interactive session
