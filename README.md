@@ -1,10 +1,12 @@
-# Q1. Is a specific project needed in my team's proposal?
+# Frequently Asked Questions
+
+## Q1. Is a specific project needed in my team's proposal?
 
 Question: Whether or not a team is supposed to apply with a specific project. Or are we going to decide on the specific project after we had the training?  My team are not sure if our application should contain only the details of the team, without a specific project. 
 
 > Answer: You can provide just the details of the team information, without a specific project. No need to register with your own specific project.
 
-# Q2. What the training will be like?
+## Q2. What the training will be like?
 
 Question: What the training will be like? Is it online lecture and will there be records of the lecture for ones who maybe available at training period?
 
@@ -12,7 +14,7 @@ Question: What the training will be like? Is it online lecture and will there be
 
 
 
-# Q3. Is it allowed to use reduced precisions in AI task?
+## Q3. Is it allowed to use reduced precisions in AI task?
 
 Question: You recommended to use DeepSpeed for the AI task, but you also mentioned in the [task description](https://github.com/hpcac/2023-APAC-HPC-AI/blob/main/BLOOM-176B_Inference/BLOOM_Inference_Task_Description.md) that HF framework is also allowed. Just want to confirm that HF framework and int8 precision is allowed for the competition?
 
@@ -24,7 +26,7 @@ Question: You recommended to use DeepSpeed for the AI task, but you also mention
 
 
 
-# Q4. Is it allowed to reduce amount of computing in AI task?
+## Q4. Is it allowed to reduce amount of computing in AI task?
 
 Question: My optimized inference needs less computing but produce the same output. Is it still not allowed since it reduces the computation amount? 
 
