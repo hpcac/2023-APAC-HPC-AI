@@ -171,13 +171,13 @@ ln -sf $MPAS_DIR/$MPAS_MODEL/atmosphere_model $MPAS_DATADIR/$MPAS_BENCHMARK/
 # Prepare Namelist
 cd $MPAS_DATADIR/$MPAS_BENCHMARK
 cp namelist.atmosphere namelist.atmosphere.300h.ori
-sed -e 's!'"'"'3_00:00:00!'"'"'12:00:00!g' namelist.atmosphere > namelist.atmosphere.12h
-sed -e 's!'"'"'3_00:00:00!'"'"'12:00:00!g' namelist.atmosphere > namelist.atmosphere.32node
-sed -e 's!'"'"'3_00:00:00!'"'"'6:00:00!g' namelist.atmosphere > namelist.atmosphere.16node
-sed -e 's!'"'"'3_00:00:00!'"'"'3:00:00!g' namelist.atmosphere > namelist.atmosphere.8node
-sed -e 's!'"'"'3_00:00:00!'"'"'4:00:00!g' namelist.atmosphere > namelist.atmosphere.32
-sed -e 's!'"'"'3_00:00:00!'"'"'2:00:00!g' namelist.atmosphere > namelist.atmosphere.16
-sed -e 's!'"'"'3_00:00:00!'"'"'1:00:00!g' namelist.atmosphere > namelist.atmosphere.8
+sed -e 's!'"'"'3_00:00:00!'"'"'1:00:00!g' namelist.atmosphere > namelist.atmosphere.1h
+sed -e 's!'"'"'3_00:00:00!'"'"'1:00:00!g' namelist.atmosphere > namelist.atmosphere.32node
+sed -e 's!'"'"'3_00:00:00!'"'"'0:30:00!g' namelist.atmosphere > namelist.atmosphere.16node
+sed -e 's!'"'"'3_00:00:00!'"'"'0:15:00!g' namelist.atmosphere > namelist.atmosphere.8node
+sed -e 's!'"'"'3_00:00:00!'"'"'1:00:00!g' namelist.atmosphere > namelist.atmosphere.32
+sed -e 's!'"'"'3_00:00:00!'"'"'0:30:00!g' namelist.atmosphere > namelist.atmosphere.16
+sed -e 's!'"'"'3_00:00:00!'"'"'0:15:00!g' namelist.atmosphere > namelist.atmosphere.8
 ```
 
 # Run MPAS-Atmosphere_benchmark_10km
