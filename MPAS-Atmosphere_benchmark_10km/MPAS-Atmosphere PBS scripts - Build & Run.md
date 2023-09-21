@@ -171,13 +171,13 @@ ln -sf $MPAS_DIR/$MPAS_MODEL/atmosphere_model $MPAS_DATADIR/$MPAS_BENCHMARK/
 # Prepare Namelist
 cd $MPAS_DATADIR/$MPAS_BENCHMARK
 cp namelist.atmosphere namelist.atmosphere.300h.ori
-sed -e 's!'"'"'3_00:00:00!'"'"'1:00:00!g' namelist.atmosphere > namelist.atmosphere.1h
-sed -e 's!'"'"'3_00:00:00!'"'"'1:00:00!g' namelist.atmosphere > namelist.atmosphere.32node
-sed -e 's!'"'"'3_00:00:00!'"'"'0:30:00!g' namelist.atmosphere > namelist.atmosphere.16node
-sed -e 's!'"'"'3_00:00:00!'"'"'0:15:00!g' namelist.atmosphere > namelist.atmosphere.8node
-sed -e 's!'"'"'3_00:00:00!'"'"'1:00:00!g' namelist.atmosphere > namelist.atmosphere.32
-sed -e 's!'"'"'3_00:00:00!'"'"'0:30:00!g' namelist.atmosphere > namelist.atmosphere.16
-sed -e 's!'"'"'3_00:00:00!'"'"'0:15:00!g' namelist.atmosphere > namelist.atmosphere.8
+sed -e 's!'"'"'3_00:00:00!'"'"'1:00:00!g' namelist.atmosphere > namelist.atmosphere.crazy1h
+sed -e 's!'"'"'3_00:00:00!'"'"'0:8:00!g' namelist.atmosphere > namelist.atmosphere.32node
+sed -e 's!'"'"'3_00:00:00!'"'"'0:4:00!g' namelist.atmosphere > namelist.atmosphere.16node
+sed -e 's!'"'"'3_00:00:00!'"'"'0:2:00!g' namelist.atmosphere > namelist.atmosphere.8node
+sed -e 's!'"'"'3_00:00:00!'"'"'0:8:00!g' namelist.atmosphere > namelist.atmosphere.32
+sed -e 's!'"'"'3_00:00:00!'"'"'0:4:00!g' namelist.atmosphere > namelist.atmosphere.16
+sed -e 's!'"'"'3_00:00:00!'"'"'0:2:00!g' namelist.atmosphere > namelist.atmosphere.8
 ```
 
 # Run MPAS-Atmosphere_benchmark_10km
@@ -186,7 +186,7 @@ sed -e 's!'"'"'3_00:00:00!'"'"'0:15:00!g' namelist.atmosphere > namelist.atmosph
 
 ```bash
 # Submit a job to run mpas-a (at least 8 nodes are needed)
-qsub -q normal -l walltime=00:59:59,ncpus=$((48*8)),mem=$((188*8))G -M 393958790@qq.com -m abe -P il82 -N job_run_mpas run_mpas.sh
+qsub -q normal -l walltime=00:59:59,ncpus=$((48*32)),mem=$((47*32))G -M 393958790@qq.com -m abe -P il82 -N job_run_mpas run_mpas.sh
 ```
 
 ## The script "run_mpas.sh"
