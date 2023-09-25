@@ -8,9 +8,9 @@ The HPC task MPAS-Atmosphere is a **single precision CPU-only** workload on up t
 
 Input is **benchmark_10km**, which can be downloaded at [Index of /projects/mpas/benchmark](https://www2.mmm.ucar.edu/projects/mpas/benchmark/)
 
-The value of config_run_duration in namelist.atmosphere need to be changed to 12 hours,
+The value of config_run_duration in namelist.atmosphere need to be changed to 16 minutes,
 
-> **config_run_duration = '12:00:00'**
+> **config_run_duration = '00:16:00'**
 
 since the original value(300 hours) will use too much compute resource and simulation time.
 
