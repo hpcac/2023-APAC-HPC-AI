@@ -32,7 +32,7 @@ time deepspeed073/p38/bin/pip --cache-dir /scratch/public/HPC-AI-BLOOM/cache/pip
 # real	3m39.252s
 
 # Sync the existing model files to your BLOOM directory
-time rsync -avP /scratch/public/HPC-AI-BLOOM/models--microsoft--bloom-deepspeed-inference-fp16 ${BLOOM_DIR}/offline_models
+time rsync -avP /scratch/public/HPC-AI-BLOOM/models--microsoft--bloom-deepspeed-inference-int8 ${BLOOM_DIR}/offline_models
 
 # Create the following links, so that huggingface transformer can work on the offline GPU nodes
 rm -rf ${HOME}/.cache/huggingface/hub
